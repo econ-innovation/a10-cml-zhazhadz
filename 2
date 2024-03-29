@@ -1,0 +1,16 @@
+#!/bin/bash
+
+
+fileNumber=$1
+
+dir1=$((fileNumber / 10000))
+dir2=$((fileNumber % 10000 / 100))
+dir3=$((fileNumber % 100))
+
+
+filePath="root/$dir1/$dir2/$dir3.txt"
+
+mkdir -p $(dirname $filePath)
+
+
+echo $filePath
